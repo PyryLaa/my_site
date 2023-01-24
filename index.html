@@ -6,56 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
     <title>Pyry's page</title>
     <style>
+        header{grid-area:header;}
+        .menu{grid-area:menu;}
+        article{grid-area:article;}
+        .links{grid-area:links;}
+
+
         body{
-            background-color: #242323;
+            background-image: url("images/forest_bg.jpg");
+            background-color: beige;
             background-size: 100%;
         }
-        #text{
-            color: #f2d3bd;
-            font-family:'Source Sans Pro', sans-serif;
+        .container{
+            background-color:rgba(245, 245, 220, 0.7);
+            background-position: center;
+            margin: 0% 10% 0% 10%;
+            display:grid;
+            grid-template-areas: 
+                'header header header header header header'
+                'menu article article article links links'
+                'footer footer footer footer footer footer'
+            ;
+            height:100vh;
         }
-        h1{
-            
+        .menu{
+            display: flex;
+            flex-direction:column;
+            align-content: flex-start;
+        }
+        header{
             text-align:center;
+            font-size:40px;
+            font-family: 'Aboreto', cursive;
         }
-        main{
-            float:left;
+        footer{
+            display:flex;
+            text-align:center;
+            align-content: flex-end;
+        }
+        article{
+            display:flex;
+            text-align:center;
+            font-size:20px;
 
-            background-color: #e67525;
-            border-radius: 5%;
-            margin:0%;
-            width:25%;
-            text-align: center;
-            
         }
-        #linkbox{
-            border-radius: 7%;
-            background-color: #e67525;
-            float: right;
-        }
+        
+        
 
     </style>
 </head>
 <body>
-    <div id="text">
-        <header>
-            <h1>This is the page</h1>
-        </header>
-        <main>
-            <p>This is my first published web page, also going to work as a visual/interactive CV</p>
-            <p>I will work on this during the course and keep updating it as needed</p>
-        
-            <p><img src="./images/butterdog.jpg" width="250" alt="Dog with a butter"/></p>
-            <p>It's a butterdog. Dog with the butter. Butterdog.</p>
-        </main>    
-        <aside id="linkbox">
-            <h2>My links</h2>
-            <p>Here is a link to <a href="https://www.youtube.com">youtube</a> so you can go watch silly animal videos</p>
-            <p>And here's a link to my <a href="https://github.com/PyryLaa">GitHub</a>🐱‍👤</p>
-        </aside>
+    <div class="container">
+        <header>Pyry's page</header>
+        <nav class="menu">
+            This is the menu
+            <a href="#">Contact info</a>
+            <a href="#">My links</a>
+        </nav>
+        <article>Article
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid consectetur amet ut dolores nobis praesentium eius repellendus. Id molestias numquam aliquam sapiente vel, ipsam soluta? Aliquam velit laboriosam minima a.</p>
+            </section>
+        </article>
+        <footer>Footer</footer>
     </div>
 </body>
 </html>
